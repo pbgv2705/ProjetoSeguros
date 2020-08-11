@@ -1,0 +1,23 @@
+﻿@model ClienteDTO
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Lista de Clientes - @ViewData["id"]</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<form asp-action="Salvar" method="post">
+
+    <label asp-for="Cpf"></label>
+    <input asp-for="Cpf" readonly/>
+    
+    <label asp-for="NomeCliente"></label>
+    <input asp-for="NomeCliente" />
+
+    <label asp-for="Data"></label>
+    <input asp-for="Data" />
+    
+    <button type="submit">Salvar</button>
+    </form>

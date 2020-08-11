@@ -1,0 +1,40 @@
+﻿@using data
+@model List<Cliente>
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Página Inicial de Clientes</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<a asp-controller="Cliente" asp-action="Novo">
+    <button class="btn btn-primary">Novo</button>
+</a>
+
+<table>
+    <tr>
+        <th>Cpf</th>
+        <th>NomeCliente</th>
+        <th>Cancelado</th>
+        <th></th>
+    </tr>
+
+    @foreach (var cliente in Model)
+    {
+        <tr>
+            <td>@cliente.Cpf</td>
+            <td>@cliente.NomeCliente</td>
+            <td>@cliente.Cancelado</td>
+            <td><a asp-controller="Cliente" asp-action="Editar" asp-route-id=@cliente.Cpf>
+                <button class="btn btn-secondary">Editar</button>
+                </a>
+            </td>
+            <td><a asp-controller="Cliente" asp-action="Apagar" asp-route-id=@cliente.Cpf>
+                <button class="btn btn-danger">Apagar</button>
+                </a>
+            </td>
+        </tr>
+    }
+</table>
