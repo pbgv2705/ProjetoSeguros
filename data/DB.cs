@@ -22,9 +22,13 @@ namespace data
             .IsRequired();
 
             builder.Entity<Cliente>()
+            .Property(e => e.Cpf)
+            .IsRequired();
+
+            builder.Entity<Cliente>()
             .HasOne(e => e.Corretor)
             .WithMany()
-            .HasForeignKey(e => e.RMCreci);
+            .HasForeignKey(e => e.Corretor.RMCreci);
         }
 
         

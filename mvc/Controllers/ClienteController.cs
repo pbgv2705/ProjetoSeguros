@@ -56,7 +56,7 @@ namespace mvc.Controllers
         [HttpPost]
         public IActionResult Salvar(ClienteDTO clienteFormulario)
         {
-          //  if (clienteFormulario.Cpf == 0)
+           if (clienteFormulario.Cpf == 0)
             {
                 //Registro novo
                 var clienteBD = new Cliente();
