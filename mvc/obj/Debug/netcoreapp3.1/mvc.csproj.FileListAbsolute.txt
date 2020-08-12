@@ -131,8 +131,6 @@ C:\Users\Paula\Documents\Toti\ProjetoSeguros\mvc\bin\Debug\netcoreapp3.1\data.pd
 C:\Users\Paula\Documents\Toti\ProjetoSeguros\mvc\obj\Debug\netcoreapp3.1\mvc.TagHelpers.input.cache
 C:\Users\Paula\Documents\Toti\ProjetoSeguros\mvc\obj\Debug\netcoreapp3.1\mvc.TagHelpers.output.cache
 C:\Users\Paula\Documents\Toti\ProjetoSeguros\mvc\obj\Debug\netcoreapp3.1\mvc.RazorCoreGenerate.cache
-C:\Users\Paula\Documents\Toti\ProjetoSeguros\mvc\obj\Debug\netcoreapp3.1\Razor\Views\Evento\Cadastro.cshtml.g.cs
-C:\Users\Paula\Documents\Toti\ProjetoSeguros\mvc\obj\Debug\netcoreapp3.1\Razor\Views\Evento\Index.cshtml.g.cs
 C:\Users\Paula\Documents\Toti\ProjetoSeguros\mvc\obj\Debug\netcoreapp3.1\Razor\Views\Home\Help.cshtml.g.cs
 C:\Users\Paula\Documents\Toti\ProjetoSeguros\mvc\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Paula\Documents\Toti\ProjetoSeguros\mvc\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
@@ -149,3 +147,5 @@ C:\Users\Paula\Documents\Toti\ProjetoSeguros\mvc\obj\Debug\netcoreapp3.1\staticw
 C:\Users\Paula\Documents\Toti\ProjetoSeguros\mvc\obj\Debug\netcoreapp3.1\staticwebassets\mvc.StaticWebAssets.xml
 C:\Users\Paula\Documents\Toti\ProjetoSeguros\mvc\obj\Debug\netcoreapp3.1\mvc.genruntimeconfig.cache
 C:\Users\Paula\Documents\Toti\ProjetoSeguros\mvc\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Paula\Documents\Toti\ProjetoSeguros\mvc\obj\Debug\netcoreapp3.1\Razor\Views\Cliente\Cadastro.cshtml.g.cs
+C:\Users\Paula\Documents\Toti\ProjetoSeguros\mvc\obj\Debug\netcoreapp3.1\Razor\Views\Cliente\Index.cshtml.g.cs

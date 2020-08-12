@@ -68,7 +68,7 @@ namespace mvc.Controllers
            else
             {
                 //Registro atualizado                        
-               var clienteBD = _dbInterno.Cliente.SingleOrDefault(e => e.Cpf == clienteFormulario.Cpf);
+               var clienteBD = _dbInterno.Clientes.SingleOrDefault(e => e.Cpf == clienteFormulario.Cpf);
 
                 clienteBD.NomeCliente = clienteFormulario.NomeCliente;
                 clienteBD.Data = clienteFormulario.Data;
