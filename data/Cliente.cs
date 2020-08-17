@@ -8,7 +8,7 @@ namespace data
         public DateTime Data { get; set; }
         public string NomeCliente { get; set; }
 
-        public int Telefone { get; set; }
+        public long Telefone { get; set; }
         public string email { get; set; }
 
         public int Apolice { get; set; }

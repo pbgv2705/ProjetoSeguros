@@ -16,13 +16,11 @@ namespace mvc.Controllers
     {
         private readonly DB _dbInterno;
 
-        //http://localhost:5000/home
         public ClienteController(DB dbViaParametro)
         {
             _dbInterno = dbViaParametro;
         }
 
-        //http://localhost:5000/home/index
         public IActionResult Index()
         {
             var listaClientes = _dbInterno.Clientes.ToList();
@@ -30,7 +28,6 @@ namespace mvc.Controllers
             return View(listaClientes);
         }
 
-        //http://localhost:5000/home/novo
         public IActionResult Novo()
         {
             var clienteDTO = new ClienteDTO();
@@ -38,7 +35,6 @@ namespace mvc.Controllers
             return View("Cadastro", clienteDTO);
         }
 
-        //http://localhost:5000/home/editar
         public IActionResult Editar(int cpf)
         {
             var cliente = _dbInterno.Clientes.SingleOrDefault(e => e.Cpf == cpf);
@@ -47,7 +43,12 @@ namespace mvc.Controllers
             {
                 Cpf = cliente.Cpf,
                 NomeCliente = cliente.NomeCliente,
-                Data = cliente.Data
+                Data = cliente.Data,
+                Telefone = cliente.Telefone,
+                email = cliente.email,
+                Apolice = cliente.Apolice,
+                Prime = cliente.Prime
+
             };
 
             return View("Cadastro", clienteDTO);
@@ -56,24 +57,30 @@ namespace mvc.Controllers
         [HttpPost]
         public IActionResult Salvar(ClienteDTO clienteFormulario)
         {
-           if (clienteFormulario.Cpf == 0)
+            if (clienteFormulario.Cpf == 0)
             {
-                //Registro novo
                 var clienteBD = new Cliente();
                 clienteBD.NomeCliente = clienteFormulario.NomeCliente;
                 clienteBD.Data = clienteFormulario.Data;
+                clienteBD.Telefone = (int)clienteFormulario.Telefone;
+                clienteBD.email = clienteFormulario.email;
+                clienteBD.Apolice = clienteFormulario.Apolice;
+                clienteBD.Prime = clienteFormulario.Prime;
 
                 _dbInterno.Add(clienteBD);
             }
-           else
-            {
-                //Registro atualizado                        
-               var clienteBD = _dbInterno.Clientes.SingleOrDefault(e => e.Cpf == clienteFormulario.Cpf);
+            else
+            {                                       
+                var clienteBD = _dbInterno.Clientes.SingleOrDefault(e => e.Cpf == clienteFormulario.Cpf);
 
                 clienteBD.NomeCliente = clienteFormulario.NomeCliente;
                 clienteBD.Data = clienteFormulario.Data;
+                clienteBD.Telefone = (int)clienteFormulario.Telefone;
+                clienteBD.email = clienteFormulario.email;
+                clienteBD.Apolice = clienteFormulario.Apolice;
+                clienteBD.Prime = clienteFormulario.Prime;
 
-               _dbInterno.Update(clienteBD);
+                _dbInterno.Update(clienteBD);
             }
 
             _dbInterno.SaveChanges();
@@ -81,7 +88,6 @@ namespace mvc.Controllers
             return RedirectToAction("Index");
         }
 
-        //http://localhost:5000/evento/apagar/{id}
         public IActionResult Apagar(int cpf)
         {
             var cliente = _dbInterno.Clientes.SingleOrDefault(e => e.Cpf == cpf);
