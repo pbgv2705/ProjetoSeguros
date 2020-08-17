@@ -13,32 +13,27 @@ namespace mvc.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        //http://localhost:5000/home
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
 
-        //http://localhost:5000/home/index
         public IActionResult Index()
         {
             return View();
         }
 
-        //http://localhost:5000/home/privacy
         public IActionResult Privacy()
         {
             return View();
         }
 
-        //http://localhost:5000/home/help
         public IActionResult Help()
         {
           ViewData["horaAtual"] = DateTime.Now.ToString("HH:mm:ss");
           return View();
         }
 
-        //http://localhost:5000/home/error
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

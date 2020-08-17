@@ -1,0 +1,19 @@
+﻿@model CorretorDTO
+@{
+    ViewData["Title"] = "Corretor";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Lista de Corretores - @ViewData["id"]</h1>
+</div>
+
+<form asp-action="Salvar" method="post">
+
+    <label asp-for="RMCreci"></label>
+    <input asp-for="RMCreci"/>
+    
+    <label asp-for="NomeCorretor"></label>
+    <input asp-for="NomeCorretor" />
+
+    <button type="submit">Salvar</button>
+</form>

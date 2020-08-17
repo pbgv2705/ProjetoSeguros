@@ -6,6 +6,6 @@ namespace data
     {
         public int RMCreci { get; set; }
 
-        public string Nome {get; set;}
+        public string NomeCorretor { get; set; }
     }
 }

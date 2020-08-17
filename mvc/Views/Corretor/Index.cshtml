@@ -1,0 +1,36 @@
+﻿@using data
+@model List<Corretor>
+@{
+    ViewData["Title"] = "Corretor";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Página Inicial de Corretores</h1>
+</div>
+
+<a asp-controller="Corretor" asp-action="Novo">
+    <button class="btn btn-primary">Novo</button>
+</a>
+
+<table>
+    <tr>
+        <th>RMCreci</th>
+        <th>Nome Corretor</th>        
+    </tr>
+
+    @foreach (var corretor in Model)
+    {
+        <tr>
+            <td>@corretor.RMCreci</td>
+            <td>@corretor.NomeCorretor</td>            
+            <td><a asp-controller="Corretor" asp-action="Editar" asp-route-id=@corretor.RMCreci>
+                <button class="btn btn-secondary">Editar</button>
+                </a>
+            </td>
+            <td><a asp-controller="Corretor" asp-action="Apagar" asp-route-id=@corretor.RMCreci>
+                <button class="btn btn-danger">Apagar</button>
+                </a>
+            </td>
+        </tr>
+    }
+</table>

@@ -11,13 +11,22 @@
 <form asp-action="Salvar" method="post">
 
     <label asp-for="Cpf"></label>
-    <input asp-for="Cpf" readonly/>
+    <input asp-for="Cpf"/>
     
     <label asp-for="NomeCliente"></label>
     <input asp-for="NomeCliente" />
+    
+    <label asp-for="Telefone"></label>
+    <input asp-for="Telefone"/>
 
-    <label asp-for="Data"></label>
-    <input asp-for="Data" />
+    <label asp-for="email"></label>
+    <input asp-for="email"/>
+
+    <label asp-for="Apolice"></label>
+    <input asp-for="Apolice" />
+
+    <label asp-for="Prime"></label>
+    <input asp-for="Prime" />
     
     <button type="submit">Salvar</button>
-    </form>
+</form>

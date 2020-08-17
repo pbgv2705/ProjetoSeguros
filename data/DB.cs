@@ -7,7 +7,8 @@ namespace data
     public class DB : DbContext
     {
         public DbSet<Cliente> Clientes { get; set; }
-        public object Cliente { get; set; }
+        public DbSet<Corretor> Corretores { get; set; }
+        
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
@@ -22,29 +23,20 @@ namespace data
             .IsRequired();
 
             builder.Entity<Cliente>()
+         ///  .Property(e => e.Cpf)
+            .HasKey(e => e.Cpf)
+            .HasName("PrimaryKey_ClienteCpf");
+        //  .IsRequired();
+            
+            builder.Entity<Cliente>()
             .HasOne(e => e.Corretor)
             .WithMany()
             .HasForeignKey(e => e.RMCreci);
+
+            builder.Entity<Corretor>()
+            .HasKey(e => e.RMCreci)
+            .HasName("PrimaryKey_CorretorRMCreci");
         }
-
-        
-
-        const string nomeDoArquivo = "data.json";
-
-        public static IEnumerable<Cliente> LerClientesDoArquivo()
-        {
-            var conteudoArquivo = System.IO.File.ReadAllText(nomeDoArquivo);
-
-            var lista = JsonSerializer.Deserialize<IEnumerable<Cliente>>(conteudoArquivo);
-
-            return lista;
-        }
-
-        public static void SalvarClientesNoArquivo(IEnumerable<Cliente> novaLista)
-        {
-            var json = JsonSerializer.Serialize(novaLista);
-
-            System.IO.File.WriteAllText(nomeDoArquivo, json);
-        }
+       
     }
 }

@@ -6,7 +6,6 @@
 
 <div class="text-center">
     <h1 class="display-4">Página Inicial de Clientes</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
 <a asp-controller="Cliente" asp-action="Novo">
@@ -16,9 +15,11 @@
 <table>
     <tr>
         <th>Cpf</th>
-        <th>NomeCliente</th>
-        <th>Cancelado</th>
-        <th></th>
+        <th>Nome Cliente</th>        
+        <th>Telefone</th>
+        <th>e-mail</th>
+        <th>Apólice</th>
+        <th>Prime</th>
     </tr>
 
     @foreach (var cliente in Model)
@@ -26,7 +27,10 @@
         <tr>
             <td>@cliente.Cpf</td>
             <td>@cliente.NomeCliente</td>
-            <td>@cliente.Cancelado</td>
+            <td>@cliente.Telefone</td> 
+            <td>@cliente.email</td>
+            <td>@cliente.Apolice</td>
+            <td>@cliente.Prime</td>            
             <td><a asp-controller="Cliente" asp-action="Editar" asp-route-id=@cliente.Cpf>
                 <button class="btn btn-secondary">Editar</button>
                 </a>
