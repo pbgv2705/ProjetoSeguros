@@ -35,14 +35,15 @@ namespace mvc.Controllers
             return View("Cadastro", corretorDTO);
         }
         
-        public IActionResult Editar(string rmCreci)
+        public IActionResult Editar(int id)
         {
-            var corretor = _dbInterno.Corretores.SingleOrDefault(e => e.RMCreci == rmCreci);
+            var corretor = _dbInterno.Corretores.SingleOrDefault(e => e.Id == id);
 
             var corretorDTO = new CorretorDTO
             {
                 RMCreci = corretor.RMCreci,
                 NomeCorretor = corretor.NomeCorretor,
+                
             };
 
             return View("Cadastro", corretorDTO);
