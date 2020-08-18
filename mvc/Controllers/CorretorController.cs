@@ -35,7 +35,7 @@ namespace mvc.Controllers
             return View("Cadastro", corretorDTO);
         }
         
-        public IActionResult Editar(int rmCreci)
+        public IActionResult Editar(string rmCreci)
         {
             var corretor = _dbInterno.Corretores.SingleOrDefault(e => e.RMCreci == rmCreci);
 
@@ -51,7 +51,7 @@ namespace mvc.Controllers
         [HttpPost]
         public IActionResult Salvar(CorretorDTO corretorFormulario)
         {
-            if (corretorFormulario.RMCreci == 0)
+            if (corretorFormulario.Id == 0)
             {
                 var corretorBD = new Corretor();
                 corretorBD.NomeCorretor = corretorFormulario.NomeCorretor;
@@ -74,9 +74,9 @@ namespace mvc.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Apagar(int rmCreci)
+        public IActionResult Apagar(int id)
         {
-            var corretor = _dbInterno.Corretores.SingleOrDefault(e => e.RMCreci == rmCreci);
+            var corretor = _dbInterno.Corretores.SingleOrDefault(e => e.Id == id);
 
             _dbInterno.Remove(corretor);
 

@@ -4,12 +4,14 @@ namespace data
 {
     public class Cliente
     {
-        public int Cpf { get; set; }
+        public int Id { get; set; }
+        public string Cpf { get; set; }
         public DateTime Data { get; set; }
+      
         public string NomeCliente { get; set; }
 
-        public long Telefone { get; set; }
-        public string email { get; set; }
+        public string Telefone { get; set; }
+        public string Email { get; set; }
 
         public int Apolice { get; set; }
 
@@ -17,7 +19,7 @@ namespace data
 
         public bool Cancelado {get; set;}
 
-        public int? RMCreci {get; set;}
+        public int CorretorId {get; set;}
 
         public Corretor Corretor {get; set;}
     }

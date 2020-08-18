@@ -17,7 +17,7 @@
         <th>Cpf</th>
         <th>Nome Cliente</th>        
         <th>Telefone</th>
-        <th>e-mail</th>
+        <th>E-mail</th>
         <th>Apólice</th>
         <th>Prime</th>
     </tr>
@@ -28,14 +28,14 @@
             <td>@cliente.Cpf</td>
             <td>@cliente.NomeCliente</td>
             <td>@cliente.Telefone</td> 
-            <td>@cliente.email</td>
+            <td>@cliente.Email</td>
             <td>@cliente.Apolice</td>
             <td>@cliente.Prime</td>            
-            <td><a asp-controller="Cliente" asp-action="Editar" asp-route-id=@cliente.Cpf>
+            <td><a asp-controller="Cliente" asp-action="Editar" asp-route-id=@cliente.Id>
                 <button class="btn btn-secondary">Editar</button>
                 </a>
             </td>
-            <td><a asp-controller="Cliente" asp-action="Apagar" asp-route-id=@cliente.Cpf>
+            <td><a asp-controller="Cliente" asp-action="Apagar" asp-route-id=@cliente.Id>
                 <button class="btn btn-danger">Apagar</button>
                 </a>
             </td>
