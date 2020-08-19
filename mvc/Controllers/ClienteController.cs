@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore.Design;
 
 namespace mvc.Controllers
 {
+    
     public class ClienteController : Controller
     {
         private readonly DB _dbInterno;
@@ -28,6 +29,7 @@ namespace mvc.Controllers
             return View(listaClientes);
         }
 
+    
         public IActionResult Novo()
         {
             var clienteDTO = new ClienteDTO();
@@ -35,9 +37,11 @@ namespace mvc.Controllers
             return View("Cadastro", clienteDTO);
         }
 
-        public IActionResult Editar(int cpf)
+        
+
+        public IActionResult Editar(int id)
         {
-            var cliente = _dbInterno.Clientes.SingleOrDefault(e => e.Cpf == cpf);
+            var cliente = _dbInterno.Clientes.SingleOrDefault(e => e.Id == id);
 
             var clienteDTO = new ClienteDTO
             {
@@ -45,38 +49,44 @@ namespace mvc.Controllers
                 NomeCliente = cliente.NomeCliente,
                 Data = cliente.Data,
                 Telefone = cliente.Telefone,
-                email = cliente.email,
+                Email = cliente.Email,
                 Apolice = cliente.Apolice,
                 Prime = cliente.Prime
 
             };
 
             return View("Cadastro", clienteDTO);
+
         }
 
         [HttpPost]
         public IActionResult Salvar(ClienteDTO clienteFormulario)
         {
-            if (clienteFormulario.Cpf == 0)
+            if (clienteFormulario.Id == 0)
             {
                 var clienteBD = new Cliente();
+              
+                clienteBD.CorretorId = clienteFormulario.CorretorId;
+                clienteBD.Cpf = clienteFormulario.Cpf;
                 clienteBD.NomeCliente = clienteFormulario.NomeCliente;
                 clienteBD.Data = clienteFormulario.Data;
-                clienteBD.Telefone = (int)clienteFormulario.Telefone;
-                clienteBD.email = clienteFormulario.email;
+                clienteBD.Telefone = clienteFormulario.Telefone;
+                clienteBD.Email = clienteFormulario.Email;
                 clienteBD.Apolice = clienteFormulario.Apolice;
                 clienteBD.Prime = clienteFormulario.Prime;
 
                 _dbInterno.Add(clienteBD);
             }
             else
-            {                                       
-                var clienteBD = _dbInterno.Clientes.SingleOrDefault(e => e.Cpf == clienteFormulario.Cpf);
-
+            {
+                var clienteBD = _dbInterno.Clientes.SingleOrDefault(e => e.Id == clienteFormulario.Id);
+                
+                clienteBD.CorretorId = clienteFormulario.CorretorId;
+                clienteBD.Cpf = clienteFormulario.Cpf;
                 clienteBD.NomeCliente = clienteFormulario.NomeCliente;
                 clienteBD.Data = clienteFormulario.Data;
-                clienteBD.Telefone = (int)clienteFormulario.Telefone;
-                clienteBD.email = clienteFormulario.email;
+                clienteBD.Telefone = clienteFormulario.Telefone;
+                clienteBD.Email = clienteFormulario.Email;
                 clienteBD.Apolice = clienteFormulario.Apolice;
                 clienteBD.Prime = clienteFormulario.Prime;
 
@@ -87,10 +97,10 @@ namespace mvc.Controllers
 
             return RedirectToAction("Index");
         }
-
-        public IActionResult Apagar(int cpf)
+        
+        public IActionResult Apagar(int id)
         {
-            var cliente = _dbInterno.Clientes.SingleOrDefault(e => e.Cpf == cpf);
+            var cliente = _dbInterno.Clientes.SingleOrDefault(e => e.Id== id);
 
             _dbInterno.Remove(cliente);
 

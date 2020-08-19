@@ -21,7 +21,7 @@ namespace data.Migrations
 
             modelBuilder.Entity("data.Cliente", b =>
                 {
-                    b.Property<int>("Cpf")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -32,8 +32,18 @@ namespace data.Migrations
                     b.Property<bool>("Cancelado")
                         .HasColumnType("bit");
 
+                    b.Property<int>("CorretorId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Cpf")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("Data")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NomeCliente")
                         .IsRequired()
@@ -43,26 +53,19 @@ namespace data.Migrations
                     b.Property<double>("Prime")
                         .HasColumnType("float");
 
-                    b.Property<int?>("RMCreci")
-                        .HasColumnType("int");
-
-                    b.Property<long>("Telefone")
-                        .HasColumnType("bigint");
-
-                    b.Property<string>("email")
+                    b.Property<string>("Telefone")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Cpf")
-                        .HasName("PrimaryKey_ClienteCpf");
+                    b.HasKey("Id");
 
-                    b.HasIndex("RMCreci");
+                    b.HasIndex("CorretorId");
 
                     b.ToTable("Clientes");
                 });
 
             modelBuilder.Entity("data.Corretor", b =>
                 {
-                    b.Property<int>("RMCreci")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -70,8 +73,11 @@ namespace data.Migrations
                     b.Property<string>("NomeCorretor")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("RMCreci")
-                        .HasName("PrimaryKey_CorretorRMCreci");
+                    b.Property<string>("RMCreci")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Corretores");
                 });
@@ -80,7 +86,9 @@ namespace data.Migrations
                 {
                     b.HasOne("data.Corretor", "Corretor")
                         .WithMany()
-                        .HasForeignKey("RMCreci");
+                        .HasForeignKey("CorretorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

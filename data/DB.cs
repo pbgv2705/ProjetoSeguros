@@ -23,19 +23,18 @@ namespace data
             .IsRequired();
 
             builder.Entity<Cliente>()
-         ///  .Property(e => e.Cpf)
-            .HasKey(e => e.Cpf)
-            .HasName("PrimaryKey_ClienteCpf");
-        //  .IsRequired();
+            .Property(e => e.Cpf)
+            .IsRequired();
             
             builder.Entity<Cliente>()
             .HasOne(e => e.Corretor)
             .WithMany()
-            .HasForeignKey(e => e.RMCreci);
+            .HasForeignKey(e => e.CorretorId);
 
             builder.Entity<Corretor>()
-            .HasKey(e => e.RMCreci)
-            .HasName("PrimaryKey_CorretorRMCreci");
+             .Property(e => e.RMCreci)
+            .IsRequired();
+        
         }
        
     }

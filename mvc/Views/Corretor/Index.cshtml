@@ -23,11 +23,11 @@
         <tr>
             <td>@corretor.RMCreci</td>
             <td>@corretor.NomeCorretor</td>            
-            <td><a asp-controller="Corretor" asp-action="Editar" asp-route-id=@corretor.RMCreci>
+            <td><a asp-controller="Corretor" asp-action="Editar" asp-route-id=@corretor.Id>
                 <button class="btn btn-secondary">Editar</button>
                 </a>
             </td>
-            <td><a asp-controller="Corretor" asp-action="Apagar" asp-route-id=@corretor.RMCreci>
+            <td><a asp-controller="Corretor" asp-action="Apagar" asp-route-id=@corretor.Id>
                 <button class="btn btn-danger">Apagar</button>
                 </a>
             </td>

@@ -9,7 +9,13 @@
 </div>
 
 <form asp-action="Salvar" method="post">
+     
 
+    <input class="d-none" asp-for="Id"/>
+    
+    <label asp-for="CorretorId"></label>
+    <input asp-for="CorretorId"/>
+    
     <label asp-for="Cpf"></label>
     <input asp-for="Cpf"/>
     
@@ -19,8 +25,8 @@
     <label asp-for="Telefone"></label>
     <input asp-for="Telefone"/>
 
-    <label asp-for="email"></label>
-    <input asp-for="email"/>
+    <label asp-for="Email"></label>
+    <input asp-for="Email"/>
 
     <label asp-for="Apolice"></label>
     <input asp-for="Apolice" />
