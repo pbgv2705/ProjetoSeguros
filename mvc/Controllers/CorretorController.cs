@@ -55,6 +55,8 @@ namespace mvc.Controllers
             if (corretorFormulario.Id == 0)
             {
                 var corretorBD = new Corretor();
+
+
                 corretorBD.NomeCorretor = corretorFormulario.NomeCorretor;
                 corretorBD.RMCreci = corretorFormulario.RMCreci;
 
@@ -62,7 +64,7 @@ namespace mvc.Controllers
             }
             else
             {
-                var corretorBD = _dbInterno.Corretores.SingleOrDefault(e => e.RMCreci == corretorFormulario.RMCreci);
+                var corretorBD = _dbInterno.Corretores.SingleOrDefault(e => e.Id == corretorFormulario.Id);
 
                 corretorBD.RMCreci = corretorFormulario.RMCreci;
                 corretorBD.NomeCorretor = corretorFormulario.NomeCorretor;

@@ -6,5 +6,7 @@ public class CorretorDTO
 
     public string RMCreci { get; set; }
     public string NomeCorretor { get; set; }
+
+    
     
 }
