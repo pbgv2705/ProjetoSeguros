@@ -10,6 +10,7 @@ using mvc.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
+
 namespace mvc.Controllers
 {
     
@@ -62,10 +63,14 @@ namespace mvc.Controllers
         [HttpPost]
         public IActionResult Salvar(ClienteDTO clienteFormulario)
         {
-            if (clienteFormulario.Id == 0)
+            if (clienteFormulario.Cpf == null  || clienteFormulario.NomeCliente ==null)
             {
+                Console.Write("campos obrigatórios");
+            } 
+            else if (clienteFormulario.Id == 0)
+            {    
+
                 var clienteBD = new Cliente();
-              
                 clienteBD.CorretorId = clienteFormulario.CorretorId;
                 clienteBD.Cpf = clienteFormulario.Cpf;
                 clienteBD.NomeCliente = clienteFormulario.NomeCliente;
@@ -76,6 +81,7 @@ namespace mvc.Controllers
                 clienteBD.Prime = clienteFormulario.Prime;
 
                 _dbInterno.Add(clienteBD);
+              
             }
             else
             {
