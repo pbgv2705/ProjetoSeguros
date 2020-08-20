@@ -46,6 +46,7 @@ namespace mvc.Controllers
 
             var clienteDTO = new ClienteDTO
             {
+                CorretorId = cliente.CorretorId,
                 Cpf = cliente.Cpf,
                 NomeCliente = cliente.NomeCliente,
                 Data = cliente.Data,
@@ -67,6 +68,8 @@ namespace mvc.Controllers
             {    
 
                 var clienteBD = new Cliente();
+
+        
                 clienteBD.CorretorId = clienteFormulario.CorretorId;
                 clienteBD.Cpf = clienteFormulario.Cpf;
                 clienteBD.NomeCliente = clienteFormulario.NomeCliente;

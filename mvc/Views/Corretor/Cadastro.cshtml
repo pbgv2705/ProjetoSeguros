@@ -2,6 +2,9 @@
 @{
     ViewData["Title"] = "Corretor";
 }
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
 
 <div class="text-center">
     <h1 class="display-4">Lista de Corretores - @ViewData["id"]</h1>
@@ -9,14 +12,13 @@
 
 <form asp-action="Salvar" method="post">
      
-    <label asp-for="Id"></label>  
-    <input asp-for="Id"/>
-   
     <label asp-for="RMCreci"></label>
     <input asp-for="RMCreci"/>
+    <span asp-validation-for="RMCreci" class="text-danger"></span>
     
     <label asp-for="NomeCorretor"></label>
     <input asp-for="NomeCorretor" />
+    <span asp-validation-for="NomeCorretor" class="text-danger"></span>
 
     <button type="submit">Salvar</button>
 </form>
