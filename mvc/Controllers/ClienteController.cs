@@ -46,6 +46,7 @@ namespace mvc.Controllers
 
             var clienteDTO = new ClienteDTO
             {
+                CorretorId = cliente.CorretorId,
                 Cpf = cliente.Cpf,
                 NomeCliente = cliente.NomeCliente,
                 Data = cliente.Data,
@@ -63,14 +64,12 @@ namespace mvc.Controllers
         [HttpPost]
         public IActionResult Salvar(ClienteDTO clienteFormulario)
         {
-            if (clienteFormulario.Cpf == null  || clienteFormulario.NomeCliente ==null)
-            {
-                Console.Write("campos obrigatórios");
-            } 
-            else if (clienteFormulario.Id == 0)
+                 if (clienteFormulario.Id == 0)
             {    
 
                 var clienteBD = new Cliente();
+
+        
                 clienteBD.CorretorId = clienteFormulario.CorretorId;
                 clienteBD.Cpf = clienteFormulario.Cpf;
                 clienteBD.NomeCliente = clienteFormulario.NomeCliente;

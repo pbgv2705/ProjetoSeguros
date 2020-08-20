@@ -2,6 +2,9 @@
 @{
     ViewData["Title"] = "Clientes";
 }
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
 
 <div class="text-center">
     <h1 class="display-4">Lista de Clientes - @ViewData["id"]</h1>
@@ -18,9 +21,11 @@
     
     <label asp-for="Cpf"></label>
     <input asp-for="Cpf"/>
+    <span asp-validation-for="Cpf" class="text-danger"></span>
     
     <label asp-for="NomeCliente"></label>
     <input asp-for="NomeCliente" />
+    <span asp-validation-for="NomeCliente" class="text-danger"></span>
     
     <label asp-for="Telefone"></label>
     <input asp-for="Telefone"/>
