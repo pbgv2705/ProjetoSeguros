@@ -22,17 +22,12 @@ namespace mvc.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        public IActionResult Help()
-        {
-          ViewData["horaAtual"] = DateTime.Now.ToString("HH:mm:ss");
-          return View();
-        }
+          
+          // tentativa de colocar imagem no carousel
+  //      public ActionResult MyImage()
+    //    {
+  //          return File(@"C:\Users\DELL i5 F82B703\Desktop\ProjetoSeguros\ProjetoSeguros\mvc\Views\Home\img\carro.jpg", "carro/jpg");
+//        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

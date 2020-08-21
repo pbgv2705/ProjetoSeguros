@@ -23,5 +23,9 @@ public class ClienteDTO
     public string RMCreci { get; set; }
     public string NomeCorretor { get; set; }
 
+   
+    [Required(ErrorMessage="O Id do Corretor é obrigatório",AllowEmptyStrings=false)]
+    [Display(Name = "Digite o seu Id")]
+
     public int CorretorId { get; set; }
 }
