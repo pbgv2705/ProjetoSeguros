@@ -12,8 +12,9 @@
     <button class="btn btn-primary">Novo</button>
 </a>
 
-<table>
+<table class="table table-striped">
     <tr>
+        <th>Id</th>
         <th>RMCreci</th>
         <th>Nome Corretor</th>        
     </tr>
@@ -21,6 +22,7 @@
     @foreach (var corretor in Model)
     {
         <tr>
+            <td>@corretor.Id</td>
             <td>@corretor.RMCreci</td>
             <td>@corretor.NomeCorretor</td>            
             <td><a asp-controller="Corretor" asp-action="Editar" asp-route-id=@corretor.Id>
