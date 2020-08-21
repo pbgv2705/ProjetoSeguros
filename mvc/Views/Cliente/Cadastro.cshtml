@@ -1,6 +1,9 @@
 ﻿@model ClienteDTO
+@inject data.DB db 
 @{
     ViewData["Title"] = "Clientes";
+    var corretores = db.Corretores.ToList();
+    var selectListCorretores = new SelectList(corretores, "Id", "NomeCorretor", Model.CorretorId);
 }
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
@@ -51,7 +54,8 @@
         
          <div class="form-group col-md-2">
              <label asp-for="CorretorId"></label>
-             <input asp-for="CorretorId" class="form-control">
+             <select  asp-for="CorretorId" class="form-control" asp-items="@selectListCorretores"></select>
+
              <span asp-validation-for="CorretorId" class="text-danger"></span>
          </div>
       </div>  
