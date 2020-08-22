@@ -9,14 +9,16 @@
 </div>
 
 <a asp-controller="Corretor" asp-action="Novo">
-    <button class="btn btn-primary">Novo</button>
+    <button class="btn btn-primary">Novo Corretor</button>
 </a>
 
-<table class="table table-striped">
+<table class="table table-striped mt-4">
     <tr>
         <th>Id</th>
         <th>RMCreci</th>
-        <th>Nome Corretor</th>        
+        <th>Nome Corretor</th>
+        <th colspan="2" class="text-center">Ações</th>
+                
     </tr>
 
     @foreach (var corretor in Model)
