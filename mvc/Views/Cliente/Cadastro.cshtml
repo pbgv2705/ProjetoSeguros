@@ -9,8 +9,8 @@
     <partial name="_ValidationScriptsPartial" />
 }
 
-<div class="text-center">
-    <h1 class="display-4">Lista de Clientes - @ViewData["id"]</h1>
+<div class="text-center mb-4">
+    <h1 class="display-4">Novo Cliente @ViewData["id"]</h1>
 </div>
 
 
@@ -19,7 +19,7 @@
   <div class="form-row">
        <div class="form-group col-md-5">
          <label asp-for="Cpf"></label>
-         <input asp-for="Cpf" class="form-control"/>
+         <input asp-for="Cpf" class="form-control"  placeholder="000.000.000-00"/>
          <span asp-validation-for="Cpf" class="text-danger"></span>
        </div>
        <div class="form-group col-md-7">
@@ -38,7 +38,7 @@
        <div class="form-row mb-4">
           <div class="form-group col-md-4">
              <label asp-for="Telefone"></label>
-             <input class="form-control" asp-for="Telefone"/>
+             <input class="form-control" asp-for="Telefone" placeholder="(00) 00000-0000"/>
          </div>
      
           <div class="form-group col-md-3">
