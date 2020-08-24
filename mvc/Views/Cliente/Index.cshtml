@@ -5,14 +5,14 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Página Inicial de Clientes</h1>
+    <h1 class="display-4">Clientes Cadastrados</h1>
 </div>
 
 <a asp-controller="Cliente" asp-action="Novo">
     <button class="btn btn-primary">Novo Cliente</button>
 </a>
 
-<table class="table table-striped">
+<table class="table table-striped mt-4">
     <tr>
         <th>Cpf</th>
         <th>Nome Cliente</th>        
@@ -20,6 +20,7 @@
         <th>E-mail</th>
         <th>Apólice</th>
         <th>Prime</th>
+        <th colspan="2" class="text-center">Ações</th>
     </tr>
 
     @foreach (var cliente in Model)

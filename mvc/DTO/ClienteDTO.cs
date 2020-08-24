@@ -10,7 +10,7 @@ public class ClienteDTO
 
     
     [Required(ErrorMessage="O nome do cliente é obrigatório",AllowEmptyStrings=false)]
-    [Display(Name = "Nome do Usuário")]
+    [Display(Name = "Nome do Cliente")]
     public string NomeCliente { get; set; }
    
     public DateTime Data { get; set; }
@@ -25,7 +25,7 @@ public class ClienteDTO
 
    
     [Required(ErrorMessage="O Id do Corretor é obrigatório",AllowEmptyStrings=false)]
-    [Display(Name = "Digite o seu Id")]
+    [Display(Name = "Corretor")]
 
     public int CorretorId { get; set; }
 }

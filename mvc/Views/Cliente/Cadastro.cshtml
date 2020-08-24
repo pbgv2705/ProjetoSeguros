@@ -1,43 +1,44 @@
 ﻿@model ClienteDTO
+@inject data.DB db 
 @{
     ViewData["Title"] = "Clientes";
+    var corretores = db.Corretores.ToList();
+    var selectListCorretores = new SelectList(corretores, "Id", "NomeCorretor", Model.CorretorId);
 }
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
 
-<div class="text-center">
-    <h1 class="display-4">Lista de Clientes - @ViewData["id"]</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center mb-4">
+    <h1 class="display-4">Novo Cliente @ViewData["id"]</h1>
 </div>
 
-<form asp-action="Salvar" method="post">
-     
 
-    <input class="d-none" asp-for="Id"/>
-    
-    <div class="form-row">
+<form asp-action="Salvar" method="post">
+  <input class="d-none" asp-for="Id"/>
+  <div class="form-row">
        <div class="form-group col-md-5">
          <label asp-for="Cpf"></label>
-         <input asp-for="Cpf" class="form-control"/>
+         <input asp-for="Cpf" class="form-control"  placeholder="000.000.000-00"/>
          <span asp-validation-for="Cpf" class="text-danger"></span>
        </div>
-
        <div class="form-group col-md-7">
          <label asp-for="NomeCliente"></label>
          <input class="form-control" asp-for="NomeCliente" />
          <span asp-validation-for="NomeCliente" class="text-danger"></span>
-       </div>   
-   </div>
-
-      <div class="form-group col-md-12">
+     </div>   
+ </div>
+ <div class="form-row">
+     <div class="form-group col-md-12">
           <label asp-for="Email"></label>
           <input class="form-control"asp-for="Email"/>
-      </div> 
-       <div class="form-row">
+     </div> 
+ </div>  
+
+       <div class="form-row mb-4">
           <div class="form-group col-md-4">
              <label asp-for="Telefone"></label>
-             <input class="form-control" asp-for="Telefone"/>
+             <input class="form-control" asp-for="Telefone" placeholder="(00) 00000-0000"/>
          </div>
      
           <div class="form-group col-md-3">
@@ -51,10 +52,9 @@
         
          <div class="form-group col-md-2">
              <label asp-for="CorretorId"></label>
-             <input asp-for="CorretorId" class="form-control">
+             <select  asp-for="CorretorId" class="form-control" asp-items="@selectListCorretores"></select>
              <span asp-validation-for="CorretorId" class="text-danger"></span>
          </div>
       </div>  
-      
-         <button type="submit">Salvar</button>
+         <button type="submit" class="btn btn-primary float-right ">Salvar</button>
 </form>
