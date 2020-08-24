@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\mvc\\mvc.csproj": {}
+    "C:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\mvc\\mvc.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\data\\data.csproj": {
+    "C:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\data\\data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\data\\data.csproj",
+        "projectUniqueName": "C:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\data\\data.csproj",
         "projectName": "data",
-        "projectPath": "C:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\data\\data.csproj",
-        "packagesPath": "C:\\Users\\DELL i5 F82B703\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\data\\obj\\",
+        "projectPath": "C:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\data\\data.csproj",
+        "packagesPath": "C:\\Users\\Paula\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL i5 F82B703\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Paula\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,17 +73,17 @@
         }
       }
     },
-    "C:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\mvc\\mvc.csproj": {
+    "C:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\mvc\\mvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\mvc\\mvc.csproj",
+        "projectUniqueName": "C:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\mvc\\mvc.csproj",
         "projectName": "mvc",
-        "projectPath": "C:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\mvc\\mvc.csproj",
-        "packagesPath": "C:\\Users\\DELL i5 F82B703\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\mvc\\obj\\",
+        "projectPath": "C:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\mvc\\mvc.csproj",
+        "packagesPath": "C:\\Users\\Paula\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\mvc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL i5 F82B703\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Paula\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,8 +96,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\data\\data.csproj": {
-                "projectPath": "C:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\data\\data.csproj"
+              "C:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\data\\data.csproj": {
+                "projectPath": "C:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\data\\data.csproj"
               }
             }
           }
