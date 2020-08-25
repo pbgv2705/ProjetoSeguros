@@ -20,12 +20,9 @@ public class ClienteDTO
     public int Apolice { get; set; }
 
     public double Prime { get; set; }
+   
     public string RMCreci { get; set; }
     public string NomeCorretor { get; set; }
-
-   
-    [Required(ErrorMessage="O Id do Corretor é obrigatório",AllowEmptyStrings=false)]
-    [Display(Name = "Corretor")]
 
     public int CorretorId { get; set; }
 }
