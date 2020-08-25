@@ -6,12 +6,13 @@
     <partial name="_ValidationScriptsPartial" />
 }
 
-<div class="text-center">
-    <h1 class="display-4">Lista de Corretores - @ViewData["id"]</h1>
+<div class="text-center mb-4">
+    <h1 class="display-4">Novo Corretor @ViewData["id"]</h1>
 </div>
 
 <form asp-action="Salvar" method="post">
      
+     <input class="d-none" asp-for="Id"/>
     <label asp-for="RMCreci"></label>
     <input asp-for="RMCreci"/>
     <span asp-validation-for="RMCreci" class="text-danger"></span>
@@ -20,5 +21,5 @@
     <input asp-for="NomeCorretor" />
     <span asp-validation-for="NomeCorretor" class="text-danger"></span>
 
-    <button type="submit">Salvar</button>
+    <button type="submit" class="btn btn-primary">Salvar</button>
 </form>

@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\mvc\\mvc.csproj",
+  "FilePath": "c:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\mvc\\mvc.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14392,53 +14392,53 @@
   "RootNamespace": "mvc",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\mvc\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\mvc\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\mvc\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\mvc\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\mvc\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\mvc\\Views\\Corretor\\Cadastro.cshtml",
-      "TargetPath": "Views\\Corretor\\Cadastro.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\mvc\\Views\\Corretor\\Index.cshtml",
-      "TargetPath": "Views\\Corretor\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\mvc\\Views\\Cliente\\Index.cshtml",
+      "FilePath": "c:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\mvc\\Views\\Cliente\\Index.cshtml",
       "TargetPath": "Views\\Cliente\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\mvc\\Views\\Shared\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\mvc\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\mvc\\Views\\Corretor\\Index.cshtml",
+      "TargetPath": "Views\\Corretor\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\mvc\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\mvc\\Views\\Cliente\\Cadastro.cshtml",
+      "TargetPath": "Views\\Cliente\\Cadastro.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\mvc\\Views\\Corretor\\Cadastro.cshtml",
+      "TargetPath": "Views\\Corretor\\Cadastro.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\mvc\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\mvc\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\DELL i5 F82B703\\Desktop\\ProjetoSeguros\\ProjetoSeguros\\mvc\\Views\\Cliente\\Cadastro.cshtml",
-      "TargetPath": "Views\\Cliente\\Cadastro.cshtml",
+      "FilePath": "c:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\mvc\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Paula\\Documents\\Toti\\ProjetoSeguros\\mvc\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     }
   ],
